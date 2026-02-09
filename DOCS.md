@@ -105,6 +105,21 @@ Comments are used to document code logic. In HT-Bash, the semicolon `;` characte
 var x := 1 ; Inline comment
 ```
 
+**DO NOT PUT COMMENTS AFTER THE `run` KEYWORD!**
+
+**Wrong:**
+
+```ahk
+run echo "hi" ; DO NOT PUT A COMMENT
+```
+
+**Right:**
+
+```ahk
+; Put the comment above the run keyword
+run echo "hi"
+```
+
 **Example 1: Section Headers**
 It is best practice to use full-line comments to separate logical sections of your code. This helps other developers (and yourself) scan the file quickly.
 

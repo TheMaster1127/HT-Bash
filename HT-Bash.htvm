@@ -559,8 +559,9 @@ str8 := A_LoopField
 break
 }
 }
-
+if (Trim(str8) != "") {
 out .= "[ " . Chr(34) . "$#" . Chr(34) . " -lt " . STR(whereBeginFuncOptanalParams) . " ] && " . Trim(str8) . "=" . Trim(A_LoopField) . Chr(10)
+}
 whereBeginFuncOptanalParams++
 }
 }

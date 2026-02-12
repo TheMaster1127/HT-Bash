@@ -785,7 +785,8 @@ if (params != ""):
                         if (A_Index37 == whereBeginFuncOptanalParams_help):
                             str8 = A_LoopField37
                             break
-                    out += "[ " + Chr(34) + "$#" + Chr(34) + " -lt " + STR(whereBeginFuncOptanalParams) + " ] && " + Trim(str8) + "=" + Trim(A_LoopField36) + Chr(10)
+                    if (Trim(str8) != ""):
+                        out += "[ " + Chr(34) + "$#" + Chr(34) + " -lt " + STR(whereBeginFuncOptanalParams) + " ] && " + Trim(str8) + "=" + Trim(A_LoopField36) + Chr(10)
                     whereBeginFuncOptanalParams += 1
         elif (Trim(StrLower(A_LoopField34)) == "funcend" or Trim(StrLower(A_LoopField34)) == "endfunc"):
             out += "}" + Chr(10)

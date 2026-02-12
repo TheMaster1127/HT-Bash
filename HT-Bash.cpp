@@ -1153,7 +1153,9 @@ int main(int argc, char* argv[]) {
                                 break;
                             }
                         }
-                        out += "[ " + Chr(34) + "$#" + Chr(34) + " -lt " + STR(whereBeginFuncOptanalParams) + " ] && " + Trim(str8) + "=" + Trim(A_LoopField36) + Chr(10);
+                        if (Trim(str8) != "") {
+                            out += "[ " + Chr(34) + "$#" + Chr(34) + " -lt " + STR(whereBeginFuncOptanalParams) + " ] && " + Trim(str8) + "=" + Trim(A_LoopField36) + Chr(10);
+                        }
                         whereBeginFuncOptanalParams++;
                     }
                 }
